@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class Guess {
 
+
     int number;
+    int count=0;
+
 
     public Guess(int number) {
         this.number = number;
@@ -16,6 +19,8 @@ public class Guess {
         while (correct) {
             System.out.print("Enter the number : ");
             int num = input.nextInt();
+            count ++;
+
 
             if (num < number) {
                 System.out.println("Your number is less than my guess");
@@ -28,6 +33,8 @@ public class Guess {
                 correct = false;
             }
         }
+        System.out.println("You have guess the number in " +count+" attemps");
+
     }
 
     public static void main(String[] args) {
